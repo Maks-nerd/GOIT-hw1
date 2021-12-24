@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+//Модули
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+//Компоненты
+import FriendList from './components/FriendList';
+import Profile from './components/Profile';
+import Statistics from './components/Statistics';
+import TransactionHistory from './components/TransactionHistory';
+
+// Данные
+import FriendListItems from './components/FriendList/friends.json';
+import User from './components/Profile/user.json';
+import StatisticData from './components/Statistics/statistical-data.json';
+import Transactions from './components/TransactionHistory/transactions.json';
+
+const App = () => (
+  <>
+    <FriendList FriendListItems={FriendListItems} />
+
+    <Profile
+      name={User.name}
+      tag={User.tag}
+      location={User.location}
+      avatar={User.avatar}
+      stats={User.stats}
+    />
+		
+		<Statistics title="Upload stats" stats={StatisticData} />
+
+		<TransactionHistory items={Transactions} />
+  </>
+);
 
 export default App;

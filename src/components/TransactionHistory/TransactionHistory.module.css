@@ -1,0 +1,26 @@
+.transaction_history{
+	width: 800px;
+	margin-top: 100px;
+	box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.19);
+}
+.transaction_history thead th{
+	background-color: blue;
+	padding: 20px;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+}
+.transaction_history tbody tr{
+	color: silver;
+	font-size: 16px;
+}
+.transaction_history tbody tr:nth-child(2n){
+	background-color: whitesmoke;
+}
+.transaction_history tbody td{
+	padding: 20px;
+	text-align: center;
+}
+.transaction_history tbody tr td:first-child{
+	text-transform: capitalize;
+}
